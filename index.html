@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Grammys</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1>Grammys Awards 2025</h1>
+            </div>
+            <button class="hamburger" aria-label="Abrir menú">☰</button> <!-- Botón Hamburguesa -->
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="categorias.html">Nominados</a>
+                <a href="ganadores.html">Ganadores</a>
+                <a href="cronologia.html">Cronología</a>
+            </div>
+        </nav>
+    </header>
+    
+    <section id="descripcion">
+        <div class="descripcion">
+            <h2>Los Premios Grammy</h2>
+            <p>
+               Uno de los galardones más prestigiosos en la industria de la música,
+            </p>
+        </div>
+    </section>
+
+    <section id="info">
+        <div class="info-container">
+            <div class="info-item">
+                <div class="info-icon">
+                  <img src="img/ic_historia.png" alt="Icono de Historia">
+                </div>
+                <div class="info-text"><h3>Historia de los Grammys</h3><p>Los Premios Grammy fueron establecidos en 1959 por la Academia Nacional de Artes y Ciencias de la Grabación</p></div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">
+                    <img src="img/ic_categorias.png" alt="Icono de Historia">
+                </div>
+                <div class="info-text"><h3>Categorías de los Grammys</h3><p>Los Grammy reconocen logros en varios géneros musicales, incluyendo pop, rock, rap, música clásica y jazz.</p></div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <h1>Galería de Imágenes</h1>
+
+        <div class="carousel">
+            <div class="carousel-container">
+                <input type="radio" id="slide1" name="carousel" checked>
+                <input type="radio" id="slide2" name="carousel">
+                <input type="radio" id="slide3" name="carousel">
+
+                <div class="carousel-slides">
+                    <div class="slide">
+                        <img src="img/carrucel01.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrucel02.jpg" alt="Imagen 2">
+                    </div>
+                    <div class="slide">
+                        <img src="img/carrucel03.jpg" alt="Imagen 3">
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.facebook.com/RecordingAcademy/" target="_blank" aria-label="Facebook"><img src="img/ic_facebook.png" alt="Facebook"></a>
+                <a href="https://twitter.com/RecordingAcad" target="_blank" aria-label="Twitter"><img src="img/ic_twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/recordingacademy/" target="_blank" aria-label="Instagram"><img src="img/ic_instagram.png" alt="Instagram"></a>
+                <a href="https://www.youtube.com/user/TheGRAMMYs" target="_blank" aria-label="YouTube"><img src="img/ic_youtube.png" alt="YouTube"></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 DenysCohco. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentImageIndex = 0;
+        const images = ["img/imagen01.jpg", "img/imagen02.jpg", "img/imagen03.jpg", "img/imagen04.jpg"];
+        
+        function changeBackgroundImage() {
+            document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${images[currentImageIndex]})`;
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+        }
+
+        setInterval(changeBackgroundImage, 4000); 
+    </script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
